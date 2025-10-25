@@ -1,0 +1,19 @@
+# importar a biblioteca random
+import random
+
+caixa = 100
+
+print ('SAAAAALVE GALEEERA!!! TA PAGANDO EM\n')
+print('TENTE ADIVINHAR O PRÓXIMO NÚMERO DE 1 A 10')
+
+while True:
+    surpresa = random.randrange(1,10)
+    palpite = int(input())
+    if surpresa == palpite:
+        print('PARABÉNS! VOCÊ RECEBEU R$ 20,00')
+        caixa += 20
+        print(f'R${caixa}')
+    elif surpresa != palpite:
+        print(f'VOCÊ PERDEU!! O NÚMERO CERTO ERA {surpresa} \nTENTE NOVAMENTE!! \nVAI QUE NA PRÓXIMA VOCÊ GANHA')
+        caixa -= 20
+        print(f'R${caixa}')
